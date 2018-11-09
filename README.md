@@ -1,5 +1,17 @@
 # TesteCieloApp
 
+## How use
+In the first time run `npm install` this will install de dependencies of the project
+
+## Run app
+To before `npm install finished` run `npm serve` to initialize the app in debug mode.
+To build to production run `npm build —prod —aot` this will generate  dist files run it in any http serve. You can install `npm install serve -g —save`
+
+## About the app
+The app will constructed using advanced techniques using big companies. 
+For best performance the application use lazy loading in all modules. 
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
 
 ## Development server
