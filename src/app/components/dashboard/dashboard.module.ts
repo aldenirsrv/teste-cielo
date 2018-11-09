@@ -16,7 +16,7 @@ import { DashboardService } from './dashboard.service';
     SharedModule,
     DashboardRoutingModule
   ],
-  declarations: [DashboardComponent, DashboardDetailsComponent], 
+  declarations: [DashboardComponent, DashboardDetailsComponent],
   providers: [DashboardService]
 })
 export class DashboardModule { }

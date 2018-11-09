@@ -9,14 +9,17 @@ import { IMENU } from './../../../models/menu.model'
 export class TemplateComponent implements OnInit {
   public menuItens: Array<IMENU>;
   constructor(
-    private router: Router,) {
-      this.menuItens = [
-        {name: 'Blog', route:'/'},
-        {name: 'Usuários', route:'/users'},
-        {name: 'Dashboard', route:'/dashboard'}
-      ]
+    private router: Router, ) {
+    /**
+     * Create menu
+     */
+    this.menuItens = [
+      { name: 'Blog', route: '/' },
+      { name: 'Usuários', route: '/users' },
+      { name: 'Dashboard', route: '/dashboard' }
+    ]
 
-     }
+  }
 
   ngOnInit() {
   }

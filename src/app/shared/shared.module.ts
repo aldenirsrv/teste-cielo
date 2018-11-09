@@ -5,7 +5,7 @@ import { ChartModule } from 'angular-highcharts';
  * Project imports
  */
 import { ErrorsHandler } from '../singleton/errors-handler';
-import { HighchartsCustomComponent} from './components/highcharts-custom-component/highcharts.component';
+import { HighchartsCustomComponent } from './components/highcharts-custom-component/highcharts.component';
 
 @NgModule({
   imports: [
@@ -14,7 +14,7 @@ import { HighchartsCustomComponent} from './components/highcharts-custom-compone
   ],
 
   declarations: [HighchartsCustomComponent],
-  exports:[
+  exports: [
     ChartModule,
     HighchartsCustomComponent
   ],

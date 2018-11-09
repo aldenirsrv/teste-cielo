@@ -26,7 +26,7 @@ import { LoaderService } from './shared/components/loader/loader.service';
       libraries: ["places"]
     }),
   ],
-  exports:[ ],
+  exports: [],
   providers: [LoaderService],
   bootstrap: [AppComponent]
 })

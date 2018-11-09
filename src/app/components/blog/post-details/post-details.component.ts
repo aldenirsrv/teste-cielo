@@ -26,7 +26,7 @@ export class PostDetailsComponent implements OnInit {
   public postId: Number;
   constructor(private service: BlogService, private activatedRoute: ActivatedRoute, private loader: LoaderService) {
     this.postId = activatedRoute.snapshot.params.id;
-   }
+  }
 
   ngOnInit() {
     this.postDetail()
@@ -37,19 +37,19 @@ export class PostDetailsComponent implements OnInit {
   postDetail = () => {
     this.loader.show();
     this.service.postDetail(this.postId).subscribe(results => {
-    this.post = results
-    this.postComments(this.post.id)
+      this.post = results
+      this.postComments(this.post.id)
     });
-   }
+  }
 
-   /**
-    * get comments by post id
-    */
-   postComments = (id: Number) => {
-     this.service.postComments(id).subscribe(results => {
+  /**
+   * get comments by post id
+   */
+  postComments = (id: Number) => {
+    this.service.postComments(id).subscribe(results => {
       this.comments = results
       this.loader.hide();
-     });
-    }
+    });
+  }
 
 }

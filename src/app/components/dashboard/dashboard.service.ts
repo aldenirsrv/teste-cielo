@@ -27,21 +27,20 @@ import { ICOMMENT } from '../../models/comment.model';
 })
 export class DashboardService {
   private user;
-  // private handleError: ErrorsHandler;
-  constructor(private httpClient:HttpClient, public error: ErrorsHandler) { }
+  constructor(private httpClient: HttpClient, public error: ErrorsHandler) { }
 
-  getAllPosts = (): Observable<IPOST[]> =>{
+  getAllPosts = (): Observable<IPOST[]> => {
     return this.httpClient.get<IPOST[]>('https://jsonplaceholder.typicode.com/posts')
-    .pipe(
-      retry(3), // retry a failed request up to 3 times
-      catchError(this.error.handleError) // then handle the error
-    );
+      .pipe(
+        retry(3), // retry a failed request up to 3 times
+        catchError(this.error.handleError) // then handle the error
+      );
   }
-  getAllComments = (): Observable<ICOMMENT[]> =>{
+  getAllComments = (): Observable<ICOMMENT[]> => {
     return this.httpClient.get<ICOMMENT[]>(`https://jsonplaceholder.typicode.com/comments`)
-    .pipe(
-      retry(3), // retry a failed request up to 3 times
-      catchError(this.error.handleError) // then handle the error
-    );
+      .pipe(
+        retry(3), // retry a failed request up to 3 times
+        catchError(this.error.handleError) // then handle the error
+      );
   }
 }

@@ -21,7 +21,7 @@ import { IUSER } from './../../../models/user.model'
 export class UsersListComponent implements OnInit {
 
   constructor(private service: UsersService, private loader: LoaderService) { }
-  public users:Array<IUSER>
+  public users: Array<IUSER>
   ngOnInit() {
     this.getUsers();
   }
@@ -31,8 +31,8 @@ export class UsersListComponent implements OnInit {
   getUsers = () => {
     this.loader.show();
     this.service.getUsers().subscribe(results => {
-     this.users = results;
-     this.loader.hide()
+      this.users = results;
+      this.loader.hide()
     });
-   }
+  }
 }

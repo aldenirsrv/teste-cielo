@@ -18,7 +18,7 @@ import { IPOST } from './../../../models/post.model'
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
-  public posts:Array<IPOST>;
+  public posts: Array<IPOST>;
   constructor(private service: BlogService, private loader: LoaderService) { }
 
   ngOnInit() {
@@ -28,10 +28,10 @@ export class PostsComponent implements OnInit {
    * Get all posts
    */
   getPosts = () => {
-  this.loader.show();
-   this.service.getPosts().subscribe(results => {
-    this.posts = results
-    this.loader.hide();
-   });
+    this.loader.show();
+    this.service.getPosts().subscribe(results => {
+      this.posts = results
+      this.loader.hide();
+    });
   }
 }

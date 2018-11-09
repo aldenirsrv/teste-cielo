@@ -1,4 +1,4 @@
-import { Component, OnInit, Input  } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Chart } from 'angular-highcharts';
 @Component({
   selector: 'app-highcharts-custom-component',
@@ -9,16 +9,16 @@ export class HighchartsCustomComponent implements OnInit {
   /**
    * Inputs to data and chart type
    */
-  @Input()data: Array<any>;
-  @Input()type: string;
+  @Input() data: Array<any>;
+  @Input() type: string;
 
   public chart;
   /**
    * Colors 
    */
   public colors = ['#FD5F00', '#4c84ff', '#ff5560', '#d50000', '#c51162', '#aa00ff', '#6200ea', '#0091ea', '#00bfa5', '#00c853', '#ffab00'];
- 
-  constructor() {}
+
+  constructor() { }
 
   ngOnInit() {
     /** 
