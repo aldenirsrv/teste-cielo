@@ -1,0 +1,23 @@
+<section class="content-inner" *ngIf="post">
+  <div class="post-body">
+    <div class="post-body__title">
+      <button class="btn" type="button" [routerLink]="['/']"><i class="material-icons"> keyboard_backspace </i></button>
+      <h5>{{ post.title }}</h5>
+    </div>
+    <div class="post-body__content">
+      {{ post.body }}
+    </div>
+  </div>
+<h5>Comentários</h5>
+  <div class="post-body" *ngFor="let comment of comments">
+      <div class="post-body__title">
+        <div>
+            <h5>{{ comment.name }}</h5>
+            <span>{{ comment.email }}</span>
+        </div>
+      </div>
+      <div class="post-body__content">
+        {{ comment.body }}
+      </div>
+    </div>
+</section>

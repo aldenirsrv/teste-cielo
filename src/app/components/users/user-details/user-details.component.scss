@@ -1,0 +1,47 @@
+@import './../../../../assets/styles/index';
+
+agm-map {
+    height: 300px;
+}
+.maps-block{
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    &__title{
+        padding: 10px
+    }
+    &__addres{
+        padding: 10px;
+        p{
+            margin: 0;
+            padding: 0;
+            line-height: 1.4rem; 
+        }
+    }
+}
+h3{
+    margin: 0;
+}
+.post-body{
+    background: #fff;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    &__title{
+        background: $default-muted;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        button{ margin-right: 10px;}
+        
+    }
+    &__content{
+        padding: 10px;
+    }
+}
+
+.user-title{
+    display: flex;
+    &__text{
+        margin-left: 10px
+    }
+}

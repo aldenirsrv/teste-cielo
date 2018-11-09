@@ -1,0 +1,42 @@
+@import './../../../../assets/styles/index';
+
+section{
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    flex-flow: column;
+}
+nav{
+    width: 100%;
+    height: $nav-height ;
+    border-bottom: 1px solid darken($default-info, 4%);
+    background: $default-info;
+    
+}
+.content {
+    display: flex;
+    height: 100%;
+    overflow: auto;
+    justify-content: center;
+    padding-top: 30px;
+  }
+  .nav-list {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      .nav-item{
+          list-style: none;
+          margin-right: 10px;
+          a{
+            color: $white;
+          }
+      }
+  }
+  footer{
+      background: $lighter;
+      height: 55px;
+      color: $default-dark;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }

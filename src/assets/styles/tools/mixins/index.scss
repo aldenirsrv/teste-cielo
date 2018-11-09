@@ -1,0 +1,16 @@
+// ---------------------------------------------------------
+// @Z-INDEX to tools/mixins
+// ---------------------------------------------------------
+@import 'mediaQueriesRanges';
+
+$z-index: (
+  modal-overlay      : 300,
+  modal-container    : 301,
+  navigation         : 100,
+  sidebar            : 200,
+  sidebar-overlay    : 199,
+  right-menu         : 201,
+  navigation-rainbow : 50,
+  share-type         : 41,
+  share              : 40,
+);

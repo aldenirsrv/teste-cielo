@@ -1,0 +1,20 @@
+<section>
+  <nav>
+    <div class="content-inner">
+      <ul class="nav-list">
+        <li *ngFor="let item of menuItens" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+          <a [routerLink]="[item.route]">
+            <span class="title">{{item.name}}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <app-loader></app-loader>
+  <div class="content">
+    <router-outlet #route="outlet"></router-outlet>
+  </div>
+  <footer>
+    <div>Aldenir FLauzino</div>
+  </footer>
+</section>

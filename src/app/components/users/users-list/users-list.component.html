@@ -1,0 +1,20 @@
+<section class="content-inner">
+  <div class="user-title">
+      <div class="user-title__text">
+          <h3> Usuários </h3>
+      </div>
+  </div>
+  <div class=" user">
+    <div class="user__box" *ngFor="let user of users">
+      <div class="user-body" [routerLink]="['./', user.id]">
+        <div class="user-body__title">
+          <h5>{{ user.name }}</h5>
+        </div>
+        <div class="user-body__content">
+          <p>{{ user.email }}</p>
+          <p>{{ user.phone }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

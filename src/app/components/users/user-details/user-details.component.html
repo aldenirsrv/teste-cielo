@@ -1,0 +1,36 @@
+<section class="content-inner" *ngIf="user">
+    <div class="user-title">
+        <button class="btn" type="button" [routerLink]="['/users']"><i class="material-icons"> keyboard_backspace </i></button>
+        <div class="user-title__text">
+            <h3> {{user.name}} </h3>
+            <p> {{ user.email}} </p>
+        </div>
+    </div>
+    <h3> Postagens </h3>
+    <div class="post-body" *ngFor="let post of posts">
+        <div class="post-body__title">
+            <div>
+                <h5>{{ post.title }}</h5>
+            </div>
+        </div>
+        <div class="post-body__content">
+            {{ post.body }}
+        </div>
+    </div>
+    <div class="maps-block">
+        <h4 class="maps-block__title">Endereço</h4>
+        <div class="maps-block__addres">
+            <p>Endereço: {{user.address.street}}</p>
+            <p>Complemento: {{user.address.suite}}</p>
+            <p>Cidade: {{user.address.city}}</p>
+            <p>Cep: {{user.address.zipcode}}</p>
+        </div>
+
+        <div>
+
+        </div>
+        <agm-map [latitude]="lat" [longitude]="lng">
+            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+    </div>
+</section>
